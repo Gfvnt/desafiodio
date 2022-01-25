@@ -1,0 +1,44 @@
+#anotações de introdução ao git e github
+
+Comando Windows e Linux, respectivamente:
+Dir/ls = lista de diretórios na pasta situada
+Cd = navegar entre pastas
+cd.. = retroceder
+cls/clear = limpar tela (ctrl + L atalho no Linux)
+tab = autocomplete
+mkdir = criar diretório
+rmdir/rm = remove repositório -rf
+r: remover todas as pastas detro daquela
+f: forçar (sem confirmação)
+
+#SHA
+A sigla SHA (secure hash algorithm) é um conjunto de funções hash criptográficas projetadas pela agência de segurança nacional dos EUA.
+A encriptação gera um conjunto de caracteres identificador de 40 dígitos.
+É uma forma curta de representar um arquivo.
+
+#Blobs, trees e commits
+Blob – git guarda os arquivos gerando a encriptação, mas também armazena metadados nesses objetos (Blob contem metadados do GIT como tipo de objeto, tamanho da string, tamanho do arquivo)
+Blob é um objeto que encapsula o comportamento de diretórios e é usado para apontar para diretórios que contêm arquivos e por consequência apontar para arquivos também
+
+Trees – armazena e aponta para blobs diferentes. Também contém metadados, aponta para um Blob, que por sua vez tem um SHA1, e a arvore também guarda o nome desse arquivo. Arvore monta a estrutura dos arquivos. Pode apontar tanto para Blobs quando para outras arvores.
+Uma coisa sempre relacionada a outra. Onde se algo mudar, tudo muda.
+
+Commit - objeto que junta tudo. Aponta para uma arvore, parente, autor ou mensagem. Também possui SHA1, também possuem encriptação que é a geração desse Hash de 40 caracteres identificador dos seus metadados. Se alterar um Blob. Vai gerar um sha1 daquela Blob. Também altera o SHA1 da arvore. Que por sua vez pode apontar para outras arvores. Mudando qualquer coisa no arquivo. Muda a arvore, que vai mudar o Commit.
+Seguro porque é difícil de ser alterado.
+
+#Chave SSH
+Forma de estabelecer conexão segura e encriptada entre duas máquinas. (chave pública e chave privada)
+Chave privada é a sua chave.
+Chave pública é a que trafega.
+(complemento em print das aulas)
+
+#Token de acesso pessoal
+Token é guardado na máquina, para ser usado como senha sempre que realizar o Commit.
+
+##atualizações nesse documento ainda necessárias...
+
+
+
+
+
+
